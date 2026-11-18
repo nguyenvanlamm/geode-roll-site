@@ -1,0 +1,21 @@
+# Geode Roll
+
+> Geode Roll is a puzzle game for iPhone (iOS 15 or later). Each island is a small stone cube floating in a midday sky; steer a hollow across its six faces, swallow what fits to grow, and gather the goal before the sun sets. Coming soon to the App Store.
+
+- Controls: drag anywhere to steer the hollow. It swallows anything smaller than itself and widens through eight sizes as it eats. Slide over an edge and the whole cube rolls a quarter turn, bringing the next face toward you. Ridges and ponds block the way.
+- The far side stays out of sight; a six-face map counts what each face still holds.
+- Each island has its own sun and 40 to 160 seconds of daylight. Gather the goal (often a geode heart) before Nightfall: finish with 40% of the daylight left for three facets, 20% for two. No lives and no energy to wait for.
+- 75 islands in five ranges: Quartz Shelf (islands 1 to 15, free), then Amethyst Hollow, Citrine Mesa, Opal Drift and Obsidian Crown (15 each, opened together by the Full Atlas).
+- Boosters: Glint (shows where the things you still need are), Linger (more daylight), Gulp (the hollow grows one size at once). The first clear of every fifth island gives one.
+- Purchases (optional): Full Atlas ($3.99, one-time, opens the other 60 islands); Prospector's Satchel ($0.99, two Glint, two Linger and two Gulp). Restore purchases is in Settings and in the Shop.
+- No ads, no account, no analytics or tracking. Progress stays on the device and the game plays offline; only purchases talk to the App Store. English only.
+
+## Pages
+
+- [Home](https://nguyenvanlamm.github.io/geode-roll-site/index.html.md): what the game is and how it plays
+- [Support](https://nguyenvanlamm.github.io/geode-roll-site/support.html.md): contact, how to play, purchases and restoring, progress
+- [Privacy Policy](https://nguyenvanlamm.github.io/geode-roll-site/privacy.html.md): what the game stores on the device and what it never collects
+
+## Optional
+
+- [Website](https://nguyenvanlamm.github.io/geode-roll-site/): the HTML landing page
