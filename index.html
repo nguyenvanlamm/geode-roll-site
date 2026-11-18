@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Geode Roll: roll the island, swallow the geode</title>
+<meta name="description" content="Geode Roll is an iPhone puzzle: steer a hollow across the six faces of a floating stone cube, grow by swallowing crystals and gather the geode heart before the sun sets. 75 islands, no ads, no tracking.">
+<link rel="canonical" href="https://nguyenvanlamm.github.io/geode-roll-site/">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#8EC3EA">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Geode Roll">
+<meta property="og:title" content="Geode Roll: Roll the island. Swallow the geode.">
+<meta property="og:description" content="A puzzle for iPhone: steer a hollow across a floating stone cube, roll it over the edges and gather the geode heart before Nightfall. Coming soon to the App Store.">
+<meta property="og:url" content="https://nguyenvanlamm.github.io/geode-roll-site/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --sky-top: #7FB9E6; --sky-low: #EAF1FA; --ink: #2A2340; --ink2: #514A68; --amethyst: #7B4FC9; --citrine: #E8B931; --chip: rgba(255,255,255,.62); --line: rgba(42,35,64,.14); }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: var(--ink); font: 17px/1.6 Manrope, system-ui, -apple-system, sans-serif;
+    background: linear-gradient(180deg, var(--sky-top) 0, #B9D8F2 380px, var(--sky-low) 900px, #F6EEF4 100%); background-attachment: fixed; }
+  main { max-width: 980px; margin: 0 auto; padding: 36px 16px 56px; }
+  header { display: flex; align-items: center; gap: 12px; }
+  header img { width: 44px; height: 44px; border-radius: 11px; box-shadow: 0 4px 14px rgba(74,34,140,.25); }
+  header span { font-family: Syne, sans-serif; font-weight: 800; font-size: 22px; letter-spacing: .02em; }
+  .label { font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--amethyst); }
+  .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; margin-top: 44px; }
+  h1 { font-family: Syne, sans-serif; font-weight: 800; font-size: clamp(34px, 5.4vw, 56px); line-height: 1.04; margin: 12px 0 18px; }
+  .sub { color: var(--ink2); font-size: 19px; max-width: 34em; margin: 0; }
+  .cta { display: inline-block; margin-top: 26px; padding: 15px 26px; border-radius: 30px; color: #fff; text-decoration: none; font-family: Syne, sans-serif; font-weight: 800; font-size: 18px;
+    background: linear-gradient(#9B72E0, var(--amethyst) 58%, #5E35A8); box-shadow: 0 5px 0 #4A2A88, 0 18px 30px -12px rgba(74,34,140,.6); }
+  .cta small { display: block; font-family: Manrope, sans-serif; font-weight: 600; font-size: 12px; opacity: .9; margin-top: 2px; }
+  .cta:active { transform: translateY(3px); box-shadow: 0 2px 0 #4A2A88; }
+  .phone { width: 100%; height: auto; max-width: 330px; justify-self: center; border-radius: 34px; box-shadow: 0 0 0 1px rgba(255,255,255,.7), 0 26px 60px rgba(42,35,64,.35); }
+  section { margin-top: 64px; }
+  h2 { font-family: Syne, sans-serif; font-weight: 800; font-size: 28px; line-height: 1.15; margin: 8px 0 20px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .tile { background: var(--chip); border: 1px solid rgba(255,255,255,.8); border-radius: 22px; padding: 20px; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 10px 30px -18px rgba(74,34,140,.5); }
+  .tile h3 { font-size: 19px; font-weight: 800; margin: 8px 0 6px; }
+  .tile p { margin: 0; color: var(--ink2); font-size: 16px; }
+  .how { display: grid; grid-template-columns: 1.1fr .9fr; gap: 36px; align-items: center; }
+  ol { list-style: none; padding: 0; margin: 0; counter-reset: step; }
+  ol li { counter-increment: step; display: grid; grid-template-columns: 40px 1fr; gap: 12px; margin-bottom: 18px; color: var(--ink2); }
+  ol li::before { content: counter(step); font-family: Syne, sans-serif; font-weight: 800; color: #3A2A00; background: radial-gradient(circle at 35% 30%, #FFF7C8, var(--citrine) 50%, #C9951A); border-radius: 50%; width: 32px; height: 32px; display: grid; place-items: center; }
+  ol b { color: var(--ink); }
+  .note { margin-top: 10px; color: var(--ink2); font-size: 15px; }
+  footer { margin-top: 64px; padding-top: 12px; border-top: 1px solid var(--line); display: flex; gap: 18px; flex-wrap: wrap; color: var(--ink2); font-size: 15px; }
+  footer a, footer span { display: inline-flex; align-items: center; min-height: 44px; }
+  a { color: var(--amethyst); }
+  a:focus-visible, .cta:focus-visible { outline: 2px solid var(--amethyst); outline-offset: 3px; }
+  @media (max-width: 760px) { .hero, .how { grid-template-columns: 1fr; } .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <header><img src="assets/icon.webp" alt="" width="44" height="44"><span>GEODE ROLL</span></header>
+
+  <div class="hero">
+    <div>
+      <div class="label">Puzzle · iPhone</div>
+      <h1>Roll the island. Swallow the geode.</h1>
+      <p class="sub">Steer a hollow across a floating stone cube. Swallow crystals to grow, slide over an edge to roll the next face into view, and gather what the island holds before Nightfall.</p>
+      <a class="cta" href="#how">Coming soon on the App Store<small>See how it plays ↓</small></a>
+    </div>
+    <img class="phone" src="assets/home.webp" alt="Geode Roll home screen: a floating stone cube island in the midday sky, the Set out button and the first range of islands" width="390" height="844">
+  </div>
+
+  <section aria-labelledby="why">
+    <div class="label">Why it is different</div>
+    <h2 id="why">A puzzle with six sides</h2>
+    <div class="grid">
+      <div class="tile"><div class="label">01 · Six faces</div><h3>The far side is out of sight</h3><p>A six-face map counts what each face still holds, so you plan the roll before you make it.</p></div>
+      <div class="tile"><div class="label">02 · Grow</div><h3>Start small, eat big</h3><p>Every crystal and stone you swallow widens the hollow, through eight sizes, until the geode heart fits.</p></div>
+      <div class="tile"><div class="label">03 · Sunset</div><h3>Race the light</h3><p>Each island has 40–160 seconds of daylight. Finish with 40% left for three facets.</p></div>
+    </div>
+  </section>
+
+  <section id="how" aria-labelledby="howto">
+    <div class="label">How to play</div>
+    <h2 id="howto">Drag, roll, gather</h2>
+    <div class="how">
+      <div>
+        <ol>
+          <li><span><b>Drag anywhere to steer.</b> The hollow follows your thumb and swallows anything smaller than itself.</span></li>
+          <li><span><b>Slide over an edge.</b> The whole cube rolls 90° and the next face turns toward you. Ridges and ponds block the way.</span></li>
+          <li><span><b>Gather the goal before Nightfall.</b> Sooner earns more facets.</span></li>
+        </ol>
+        <p class="note">The 15 islands of Quartz Shelf are free. The Full Atlas ($3.99) opens the other 60 with one purchase. Glint, Linger and Gulp help when you are stuck; you find some every fifth island, and the Prospector's Satchel ($0.99) adds two of each.</p>
+      </div>
+      <img class="phone" src="assets/game.webp" alt="An island in play: the hollow on the top face of the stone cube, the sun track, goal chips, boosters and the six-face map" width="390" height="844" loading="lazy">
+    </div>
+  </section>
+
+  <section aria-labelledby="privacy">
+    <div class="label">Privacy</div>
+    <h2 id="privacy">No ads. No tracking. No account.</h2>
+    <p class="sub">Geode Roll plays offline and keeps your progress on your device. Read the <a href="privacy.html">privacy policy</a>.</p>
+  </section>
+
+  <footer>
+    <span>© 2026 Geode Roll</span>
+    <a href="privacy.html">Privacy</a>
+    <a href="support.html">Support</a>
+  </footer>
+</main>
+</body>
+</html>
